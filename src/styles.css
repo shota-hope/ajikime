@@ -25,7 +25,7 @@ button { font: inherit; }
   letter-spacing: 0.12em;
 }
 h1, h2, p { margin-top: 0; }
-h1 { margin-bottom: 10px; font-family: Georgia, serif; font-size: clamp(2.4rem, 12vw, 4rem); line-height: 1; }
+h1 { margin-bottom: 10px; font-family: inherit; font-size: clamp(2.4rem, 12vw, 4rem); font-weight: 800; letter-spacing: -0.06em; line-height: 1; }
 .intro { margin-bottom: 0; color: #725d52; font-size: 0.95rem; }
 
 .hero-card {
@@ -35,7 +35,7 @@ h1 { margin-bottom: 10px; font-family: Georgia, serif; font-size: clamp(2.4rem, 
   background: #fffaf3;
   box-shadow: 0 12px 30px rgb(100 65 38 / 8%);
 }
-.hero-card h2 { max-width: 12em; margin-bottom: 14px; font-family: Georgia, serif; font-size: clamp(1.65rem, 7vw, 2.6rem); line-height: 1.25; }
+.hero-card h2 { max-width: 12em; margin-bottom: 14px; font-family: inherit; font-size: clamp(1.65rem, 7vw, 2.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.25; }
 .placeholder-copy { max-width: 32em; margin-bottom: 28px; color: #806d62; line-height: 1.8; }
 .primary-button { width: 100%; min-height: 52px; border: 0; border-radius: 14px; color: #fffaf3; background: #bc704b; font-weight: 700; cursor: not-allowed; opacity: 0.55; }
 
