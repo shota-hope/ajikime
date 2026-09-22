@@ -1,30 +1,69 @@
-import { flavorings } from './data'
+import { useState } from 'react'
+import { flavorings, seasonings } from './data'
+import type { Flavoring } from './data'
+import { pickFlavoring } from './randomFlavoring'
+
+const seasoningLabels = new Map(seasonings.map(({ name, label }) => [name, label]))
+
+function SeasoningList({ items }: { items: Flavoring['seasonings'] }) {
+  return (
+    <dl className="seasoning-list">
+      {items.map(({ name, amount }) => (
+        <div key={name}>
+          <dt>{seasoningLabels.get(name) ?? name}</dt>
+          <dd>{amount}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
 
 export function App() {
+  const [today, setToday] = useState(() => pickFlavoring(flavorings))
+
+  const redraw = () => {
+    setToday((current) => pickFlavoring(flavorings, current?.name))
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
-        <div className="brand-row">
-          <span className="brand-mark" aria-hidden="true">✦</span>
-          <p className="eyebrow">今日のごはんに</p>
-        </div>
         <h1>あじきめ</h1>
         <p className="intro">料理を決めずに、今日の味だけ決めよう。</p>
       </header>
 
       <section className="hero-card" aria-labelledby="today-title">
-        <span className="hero-accent" aria-hidden="true" />
         <div className="hero-card__content">
-          <div className="card-label">今日の味付け</div>
-          <h2 id="today-title">ここに味付けが表示されます</h2>
-          <p className="placeholder-copy">
-            {flavorings.length}件の味付けを用意しました。おすすめ表示は次の更新で追加します。
-          </p>
-          <button type="button" className="primary-button" disabled>
-            別の味にする <span aria-hidden="true">›</span>
-          </button>
+          {today ? (
+            <>
+              <h2 id="today-title">{today.label}</h2>
+              <div className="flavoring-detail">
+                <h3>基本の調味料 <span>（2人分くらい）</span></h3>
+                <SeasoningList items={today.seasonings} />
+              </div>
+              {today.optionalSeasonings.length > 0 && (
+                <div className="flavoring-detail">
+                  <h3>あれば</h3>
+                  <SeasoningList items={today.optionalSeasonings} />
+                </div>
+              )}
+              <div className="flavoring-detail">
+                <h3>合う食材</h3>
+                <ul className="good-with">
+                  {today.goodWith.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}
+                </ul>
+              </div>
+              <p className="flavoring-comment">{today.comment}</p>
+              <button type="button" className="primary-button" onClick={redraw}>
+                別の味にする <span aria-hidden="true">›</span>
+              </button>
+            </>
+          ) : (
+            <p className="placeholder-copy">味付けがまだ登録されていません。</p>
+          )}
         </div>
       </section>
+      <p className="amount-note">分量は目安です。食材の量に合わせて少なめから調整してください。</p>
 
       <section className="list-section" aria-labelledby="list-title">
         <div className="section-heading">
