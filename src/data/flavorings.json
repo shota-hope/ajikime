@@ -11,20 +11,20 @@
     "optionalSeasonings": [{ "name": "sugar", "amount": "小さじ1/2" }],
     "goodWith": ["豚肉", "鶏肉", "玉ねぎ", "きのこ"],
     "spicy": false,
-    "comment": "甘辛いしょうがの香りで、ごはんが進む定番。"
+    "comment": "食材に火を通してからたれを加え、ひと煮立ち。甘めが好きなら砂糖を足して。"
   },
   {
-    "name": "miso-butter",
-    "label": "みそバター風",
+    "name": "miso-stir-fry",
+    "label": "みそ炒め風",
     "seasonings": [
       { "name": "miso", "amount": "大さじ1" },
       { "name": "mirin", "amount": "大さじ1" },
-      { "name": "butter", "amount": "10g" }
+      { "name": "sake", "amount": "大さじ1" }
     ],
     "optionalSeasonings": [{ "name": "garlic", "amount": "すりおろし少々" }],
-    "goodWith": ["鮭", "鶏肉", "キャベツ", "じゃがいも"],
+    "goodWith": ["豚肉", "鶏肉", "キャベツ", "なす"],
     "spicy": false,
-    "comment": "こっくりした味で、野菜も主菜もまとめやすい。"
+    "comment": "みそをみりんと酒で溶き、炒めた食材に加えて加熱。焦げやすいので火を弱めてからめて。"
   },
   {
     "name": "oyster-stir-fry",
@@ -37,7 +37,7 @@
     "optionalSeasonings": [{ "name": "sesame-oil", "amount": "小さじ1" }],
     "goodWith": ["牛肉", "豚肉", "小松菜", "パプリカ"],
     "spicy": false,
-    "comment": "うまみのある中華寄りの炒めものに。"
+    "comment": "食材を炒めてからたれを加え、ひと煮立ち。ごま油は仕上げに。"
   },
   {
     "name": "sweet-and-sour",
@@ -50,7 +50,7 @@
     "optionalSeasonings": [{ "name": "ketchup", "amount": "大さじ1" }],
     "goodWith": ["鶏肉", "豚肉", "なす", "れんこん"],
     "spicy": false,
-    "comment": "さっぱり甘い味で、揚げ焼きにもよく合う。"
+    "comment": "砂糖を溶かすように軽く煮立て、焼いた食材にからめて。ケチャップを足すと酢豚風に。"
   },
   {
     "name": "sesame-ponzu",
@@ -63,33 +63,33 @@
     "optionalSeasonings": [{ "name": "yuzu-kosho", "amount": "少々" }],
     "goodWith": ["豚しゃぶ", "豆腐", "もやし", "きのこ"],
     "spicy": false,
-    "comment": "火を止めてからからめると、香りが生きる。"
+    "comment": "加熱済みの食材や豆腐に、食べる直前にからめて。ゆずこしょうを足すと辛みが出ます。"
   },
   {
     "name": "garlic-salt",
     "label": "にんにく塩だれ風",
     "seasonings": [
-      { "name": "salt", "amount": "小さじ1/3" },
+      { "name": "salt", "amount": "小さじ1/4から" },
       { "name": "garlic", "amount": "すりおろし小さじ1/2" },
       { "name": "sesame-oil", "amount": "大さじ1" }
     ],
     "optionalSeasonings": [{ "name": "chicken-stock-powder", "amount": "小さじ1/2" }],
     "goodWith": ["鶏肉", "豚肉", "ねぎ", "もやし"],
     "spicy": false,
-    "comment": "香ばしくシンプル。炒めものを手早く決めたい日に。"
+    "comment": "にんにくは食材と炒めて香ばしく。鶏がらスープの素を使うときは塩を控えめに。"
   },
   {
     "name": "korean-sweet-spicy",
     "label": "甘辛コチュジャン風",
     "seasonings": [
       { "name": "gochujang", "amount": "大さじ1" },
-      { "name": "soy-sauce", "amount": "小さじ2" },
+      { "name": "soy-sauce", "amount": "小さじ1" },
       { "name": "mirin", "amount": "大さじ1" }
     ],
     "optionalSeasonings": [{ "name": "sesame-seeds", "amount": "大さじ1" }],
     "goodWith": ["豚肉", "鶏肉", "キャベツ", "にら"],
     "spicy": true,
-    "comment": "甘みのあとにピリッとくる、食欲の出る味。"
+    "comment": "食材に火を通してから加え、焦がさないよう加熱。コチュジャンは辛さに合わせて控えめから。"
   },
   {
     "name": "curry-soy",
@@ -101,33 +101,31 @@
     ],
     "optionalSeasonings": [{ "name": "garlic", "amount": "すりおろし少々" }],
     "goodWith": ["鶏肉", "ツナ", "じゃがいも", "ブロッコリー"],
-    "spicy": false,
-    "comment": "いつものしょうゆ味を、カレーの香りで気分転換。"
+    "spicy": true,
+    "comment": "炒めた食材に加えて加熱。カレー粉は商品で辛さが違うので、少量から調整して。"
   },
   {
-    "name": "teriyaki",
-    "label": "照り焼き風",
+    "name": "soy-stir-fry",
+    "label": "しょうゆ炒め風",
     "seasonings": [
-      { "name": "soy-sauce", "amount": "大さじ1と1/2" },
-      { "name": "mirin", "amount": "大さじ1と1/2" },
-      { "name": "sugar", "amount": "小さじ1" }
+      { "name": "soy-sauce", "amount": "大さじ1" },
+      { "name": "sake", "amount": "大さじ1" }
     ],
-    "optionalSeasonings": [{ "name": "sake", "amount": "大さじ1" }],
-    "goodWith": ["鶏肉", "ぶり", "厚揚げ", "ピーマン"],
+    "optionalSeasonings": [{ "name": "sesame-oil", "amount": "小さじ1" }],
+    "goodWith": ["豚肉", "厚揚げ", "小松菜", "きのこ"],
     "spicy": false,
-    "comment": "つやのある甘辛味。焼きつけてから加えるのがおすすめ。"
+    "comment": "炒めた食材にしょうゆと酒を加え、加熱してからめて。ごま油は仕上げに。"
   },
   {
-    "name": "mayo-ketchup",
-    "label": "マヨケチャップ風",
+    "name": "salt-pepper-stir-fry",
+    "label": "塩こしょう炒め風",
     "seasonings": [
-      { "name": "ketchup", "amount": "大さじ2" },
-      { "name": "mayonnaise", "amount": "大さじ2" },
-      { "name": "soy-sauce", "amount": "小さじ1" }
+      { "name": "salt", "amount": "小さじ1/4から" },
+      { "name": "pepper", "amount": "少々" }
     ],
-    "optionalSeasonings": [{ "name": "garlic", "amount": "すりおろし少々" }],
-    "goodWith": ["えび", "鶏肉", "ゆで卵", "ブロッコリー"],
-    "spicy": false,
-    "comment": "まろやかで親しみやすい、子どもにも食べやすい味。"
+    "optionalSeasonings": [],
+    "goodWith": ["豚肉", "鶏肉", "キャベツ", "もやし"],
+    "spicy": true,
+    "comment": "炒めた食材に塩を少しずつ加え、こしょうで仕上げて。こしょうの辛みが苦手なら控えめに。"
   }
 ]
