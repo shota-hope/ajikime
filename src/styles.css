@@ -1,0 +1,54 @@
+:root {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  color: #3d302b;
+  background: #f6efe5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+
+.app-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 32px 20px 36px;
+}
+
+.app-header { padding: 4px 4px 28px; }
+.eyebrow, .card-label {
+  margin: 0 0 8px;
+  color: #b26743;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 10px; font-family: Georgia, serif; font-size: clamp(2.4rem, 12vw, 4rem); line-height: 1; }
+.intro { margin-bottom: 0; color: #725d52; font-size: 0.95rem; }
+
+.hero-card {
+  padding: clamp(28px, 8vw, 52px) clamp(22px, 7vw, 48px);
+  border: 1px solid #ead9c7;
+  border-radius: 24px;
+  background: #fffaf3;
+  box-shadow: 0 12px 30px rgb(100 65 38 / 8%);
+}
+.hero-card h2 { max-width: 12em; margin-bottom: 14px; font-family: Georgia, serif; font-size: clamp(1.65rem, 7vw, 2.6rem); line-height: 1.25; }
+.placeholder-copy { max-width: 32em; margin-bottom: 28px; color: #806d62; line-height: 1.8; }
+.primary-button { width: 100%; min-height: 52px; border: 0; border-radius: 14px; color: #fffaf3; background: #bc704b; font-weight: 700; cursor: not-allowed; opacity: 0.55; }
+
+.list-section { padding: 36px 4px 0; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.section-heading h2 { margin-bottom: 14px; font-size: 1.25rem; }
+.count { color: #a98670; font-size: 0.8rem; }
+.empty-list { display: grid; place-items: center; min-height: 130px; padding: 20px; border: 1px dashed #d9c2ad; border-radius: 18px; color: #806d62; text-align: center; }
+.empty-list p { margin: 8px 0 0; font-size: 0.9rem; }
+.empty-icon { color: #c1825f; font-size: 1.2rem; }
+footer { padding-top: 42px; color: #a38b7b; font-size: 0.76rem; text-align: center; letter-spacing: 0.08em; }
+
+@media (min-width: 600px) {
+  .app-shell { padding-top: 56px; }
+  .primary-button { width: auto; padding: 0 32px; }
+}
