@@ -127,5 +127,42 @@
     "goodWith": ["豚肉", "鶏肉", "キャベツ", "もやし"],
     "spicy": true,
     "comment": "炒めた食材に塩を少しずつ加え、こしょうで仕上げて。こしょうの辛みが苦手なら控えめに。"
+  },
+  {
+    "name": "butter-soy",
+    "label": "バターしょうゆ風",
+    "seasonings": [
+      { "name": "butter", "amount": "10g" },
+      { "name": "soy-sauce", "amount": "小さじ2" }
+    ],
+    "optionalSeasonings": [],
+    "goodWith": ["鶏肉", "鮭", "きのこ", "じゃがいも"],
+    "spicy": false,
+    "comment": "食材に火を通してからバターとしょうゆを加え、手早くからめて。有塩バターや塩鮭を使うときはしょうゆを控えめに。"
+  },
+  {
+    "name": "lemon-salt",
+    "label": "レモン塩風",
+    "seasonings": [
+      { "name": "lemon-juice", "amount": "小さじ2" },
+      { "name": "salt", "amount": "小さじ1/4から" },
+      { "name": "olive-oil", "amount": "小さじ2" }
+    ],
+    "optionalSeasonings": [{ "name": "garlic", "amount": "すりおろし少々" }],
+    "goodWith": ["鶏肉", "白身魚", "キャベツ", "ブロッコリー"],
+    "spicy": false,
+    "comment": "オリーブオイルで炒め、塩で味を調えて。レモン汁は仕上げに加えて。にんにくを使うなら食材と一緒に炒めて。"
+  },
+  {
+    "name": "ketchup-stir-fry",
+    "label": "ケチャップ炒め風",
+    "seasonings": [
+      { "name": "ketchup", "amount": "大さじ2" },
+      { "name": "sake", "amount": "大さじ1" }
+    ],
+    "optionalSeasonings": [],
+    "goodWith": ["鶏肉", "豚肉", "玉ねぎ", "ピーマン"],
+    "spicy": false,
+    "comment": "食材に火を通してからケチャップと酒を加え、加熱してからめて。水分を軽く飛ばすと味がなじみます。"
   }
 ]

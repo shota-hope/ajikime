@@ -17,5 +17,8 @@
   { "name": "gochujang", "label": "コチュジャン" },
   { "name": "curry-powder", "label": "カレー粉" },
   { "name": "ketchup", "label": "ケチャップ" },
-  { "name": "yuzu-kosho", "label": "ゆずこしょう" }
+  { "name": "yuzu-kosho", "label": "ゆずこしょう" },
+  { "name": "butter", "label": "バター" },
+  { "name": "lemon-juice", "label": "レモン汁" },
+  { "name": "olive-oil", "label": "オリーブオイル" }
 ]

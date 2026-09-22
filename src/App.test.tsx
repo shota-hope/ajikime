@@ -15,7 +15,7 @@ describe('App', () => {
     expect(screen.getByText('豚肉')).toBeInTheDocument()
     expect(screen.getByText('食材に火を通してからたれを加え、ひと煮立ち。甘めが好きなら砂糖を足して。')).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: '味付け一覧' })).toBeInTheDocument()
-    expect(screen.getAllByText('10件').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('13件').length).toBeGreaterThan(0)
     expect(screen.getByRole('button', { name: '別の味にする' })).toBeEnabled()
     expect(screen.queryByText('今日のごはんに')).not.toBeInTheDocument()
     vi.restoreAllMocks()
