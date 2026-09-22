@@ -1,3 +1,5 @@
+import { flavorings } from './data'
+
 export function App() {
   return (
     <main className="app-shell">
@@ -11,7 +13,7 @@ export function App() {
         <div className="card-label">今日の味付け</div>
         <h2 id="today-title">ここに味付けが表示されます</h2>
         <p className="placeholder-copy">
-          味付けデータを追加すると、ここにおすすめが表示されます。
+          {flavorings.length}件の味付けを用意しました。おすすめ表示は次の更新で追加します。
         </p>
         <button type="button" className="primary-button" disabled>
           別の味にする
@@ -21,11 +23,11 @@ export function App() {
       <section className="list-section" aria-labelledby="list-title">
         <div className="section-heading">
           <h2 id="list-title">味付け一覧</h2>
-          <span className="count">準備中</span>
+          <span className="count">{flavorings.length}件</span>
         </div>
         <div className="empty-list">
           <span className="empty-icon" aria-hidden="true">✦</span>
-          <p>味付けを選べる一覧を準備しています。</p>
+          <p>{flavorings.length}件の味付けを選べる一覧を準備しています。</p>
         </div>
       </section>
 
