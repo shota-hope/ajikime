@@ -164,5 +164,44 @@
     "goodWith": ["鶏肉", "豚肉", "玉ねぎ", "ピーマン"],
     "spicy": false,
     "comment": "食材に火を通してからケチャップと酒を加え、加熱してからめて。水分を軽く飛ばすと味がなじみます。"
+  },
+  {
+    "name": "ume-okaka",
+    "label": "梅おかか和え風",
+    "seasonings": [
+      { "name": "ume-paste", "amount": "小さじ1" },
+      { "name": "soy-sauce", "amount": "小さじ1" },
+      { "name": "bonito-flakes", "amount": "2g" }
+    ],
+    "optionalSeasonings": [],
+    "goodWith": ["水菜", "きゅうり", "きのこ", "豆腐"],
+    "spicy": false,
+    "comment": "梅肉としょうゆを混ぜ、かつお節を加えて和えて。梅干しの塩分に合わせてしょうゆを控えて。"
+  },
+  {
+    "name": "honey-mustard",
+    "label": "ハニーマスタード風",
+    "seasonings": [
+      { "name": "whole-grain-mustard", "amount": "大さじ1" },
+      { "name": "honey", "amount": "大さじ1/2" },
+      { "name": "lemon-juice", "amount": "小さじ1" },
+      { "name": "water", "amount": "大さじ1" }
+    ],
+    "optionalSeasonings": [],
+    "goodWith": ["鶏肉", "豚肉", "じゃがいも", "ブロッコリー"],
+    "spicy": false,
+    "comment": "食材に火を通してから混ぜたソースを加え、全体にからめて。はちみつは1歳未満の乳児に与えないでください。"
+  },
+  {
+    "name": "consomme-cheese",
+    "label": "コンソメチーズ風",
+    "seasonings": [
+      { "name": "consomme-powder", "amount": "小さじ1/2" },
+      { "name": "parmesan-cheese", "amount": "大さじ1" }
+    ],
+    "optionalSeasonings": [{ "name": "pepper", "amount": "少々" }],
+    "goodWith": ["じゃがいも", "きのこ", "鶏肉", "ブロッコリー"],
+    "spicy": false,
+    "comment": "加熱した食材にコンソメと粉チーズをからめて。コンソメの塩分があるので、塩は味を見てから。"
   }
 ]

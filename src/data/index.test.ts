@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { flavorings, seasonings } from './index'
 
 describe('seasoning master data', () => {
-  it('has thirteen flavorings with unique English keys', () => {
-    expect(flavorings).toHaveLength(13)
+  it('has sixteen flavorings with unique English keys', () => {
+    expect(flavorings).toHaveLength(16)
     expect(new Set(flavorings.map(({ name }) => name)).size).toBe(flavorings.length)
   })
 

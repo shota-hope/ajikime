@@ -20,5 +20,12 @@
   { "name": "yuzu-kosho", "label": "ゆずこしょう" },
   { "name": "butter", "label": "バター" },
   { "name": "lemon-juice", "label": "レモン汁" },
-  { "name": "olive-oil", "label": "オリーブオイル" }
+  { "name": "olive-oil", "label": "オリーブオイル" },
+  { "name": "ume-paste", "label": "梅肉" },
+  { "name": "bonito-flakes", "label": "かつお節" },
+  { "name": "whole-grain-mustard", "label": "粒マスタード" },
+  { "name": "honey", "label": "はちみつ" },
+  { "name": "water", "label": "水" },
+  { "name": "consomme-powder", "label": "顆粒コンソメ" },
+  { "name": "parmesan-cheese", "label": "粉チーズ" }
 ]
