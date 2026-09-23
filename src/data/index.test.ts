@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { flavorings, seasonings } from './index'
 
 describe('seasoning master data', () => {
-  it('has ten flavorings with unique English keys', () => {
-    expect(flavorings).toHaveLength(10)
+  it('has sixteen flavorings with unique English keys', () => {
+    expect(flavorings).toHaveLength(16)
     expect(new Set(flavorings.map(({ name }) => name)).size).toBe(flavorings.length)
   })
 
@@ -13,6 +13,14 @@ describe('seasoning master data', () => {
     expect(seasoningNames.size).toBe(seasonings.length)
 
     for (const flavoring of flavorings) {
+      expect(flavoring.name).toMatch(/^[a-z]+(?:-[a-z]+)*$/)
+      expect(flavoring.label.trim()).not.toBe('')
+      expect(flavoring.comment.trim()).not.toBe('')
+      expect(flavoring.goodWith.length).toBeGreaterThan(0)
+      expect(flavoring.seasonings.length).toBeGreaterThan(0)
+      expect(typeof flavoring.spicy).toBe('boolean')
+      const references = [...flavoring.seasonings, ...flavoring.optionalSeasonings]
+      expect(new Set(references.map(({ name }) => name)).size).toBe(references.length)
       for (const seasoning of [
         ...flavoring.seasonings,
         ...flavoring.optionalSeasonings,
