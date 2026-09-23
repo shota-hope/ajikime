@@ -20,9 +20,18 @@ function SeasoningList({ items }: { items: Flavoring['seasonings'] }) {
 
 export function App() {
   const [today, setToday] = useState(() => pickFlavoring(flavorings))
+  const [view, setView] = useState<'home' | 'list'>('home')
+  const [selectedFromList, setSelectedFromList] = useState(false)
 
   const redraw = () => {
     setToday((current) => pickFlavoring(flavorings, current?.name))
+    setSelectedFromList(false)
+  }
+
+  const selectFlavoring = (flavoring: Flavoring) => {
+    setToday(flavoring)
+    setSelectedFromList(true)
+    setView('home')
   }
 
   return (
@@ -32,6 +41,12 @@ export function App() {
         <p className="intro">料理を決めずに、今日の味だけ決めよう。</p>
       </header>
 
+      <nav className="view-switcher" aria-label="画面切り替え">
+        <button type="button" aria-pressed={view === 'home'} onClick={() => setView('home')}>今日の味</button>
+        <button type="button" aria-pressed={view === 'list'} onClick={() => setView('list')}>味付け一覧</button>
+      </nav>
+
+      {view === 'home' ? <>
       <section className="hero-card" aria-labelledby="today-title">
         <div className="hero-card__content">
           {today ? (
@@ -55,7 +70,7 @@ export function App() {
               </div>
               <p className="flavoring-comment">{today.comment}</p>
               <button type="button" className="primary-button" onClick={redraw}>
-                別の味にする <span aria-hidden="true">›</span>
+                {selectedFromList ? 'ランダムに戻る' : '別の味にする'} <span aria-hidden="true">›</span>
               </button>
             </>
           ) : (
@@ -64,7 +79,7 @@ export function App() {
         </div>
       </section>
       <p className="amount-note">分量は目安です。食材の量に合わせて少なめから調整してください。</p>
-
+      </> : (
       <section className="list-section" aria-labelledby="list-title">
         <div className="section-heading">
           <div>
@@ -73,14 +88,23 @@ export function App() {
           </div>
           <span className="count">{flavorings.length}件</span>
         </div>
-        <div className="empty-list">
-          <span className="empty-icon" aria-hidden="true">✦</span>
-          <div>
-            <p>{flavorings.length}件の味付けを選べる一覧を準備しています。</p>
-            <span>気になる味を見つけてみましょう</span>
-          </div>
-        </div>
+        {flavorings.length > 0 ? (
+          <ul className="flavoring-list">
+            {flavorings.map((flavoring) => (
+              <li key={flavoring.name}>
+                <button type="button" onClick={() => selectFlavoring(flavoring)}>
+                  <span className="flavoring-list__content">
+                    <span className="flavoring-list__name">{flavoring.label}</span>
+                    <span className="flavoring-list__seasonings">{flavoring.seasonings.map(({ name }) => seasoningLabels.get(name) ?? name).join('・')}</span>
+                  </span>
+                  <span className="flavoring-list__arrow" aria-hidden="true">›</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : <p className="placeholder-copy">味付けがまだ登録されていません。</p>}
       </section>
+      )}
 
       <footer>手元の食材で、気軽に。</footer>
     </main>

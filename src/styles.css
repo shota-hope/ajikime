@@ -18,7 +18,7 @@ button { font: inherit; }
   background: #1c1d21;
 }
 
-.app-header { padding: 5px 4px 31px; }
+.app-header { padding: 5px 4px 22px; }
 .eyebrow {
   margin: 0;
   color: #a8a5b0;
@@ -37,6 +37,30 @@ h1 {
   line-height: 1;
 }
 .intro { margin-bottom: 0; color: #aaa8b1; font-size: .88rem; line-height: 1.65; }
+.view-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 26px;
+  padding: 4px;
+  border-radius: 13px;
+  background: #28292f;
+}
+.view-switcher button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  color: #c5c2cc;
+  background: transparent;
+  font-size: .88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.view-switcher button[aria-pressed="true"] { color: #fff; background: #8b6fe8; }
+.view-switcher button:focus-visible, .primary-button:focus-visible, .flavoring-list button:focus-visible {
+  outline: 2px solid #d4c5ff;
+  outline-offset: 3px;
+}
 
 .hero-card {
   position: relative;
@@ -94,36 +118,32 @@ h1 {
 .primary-button span { font-size: 1.55rem; font-weight: 400; line-height: 0; }
 .amount-note { margin: 15px 4px 0; color: #918e98; font-size: .7rem; line-height: 1.65; }
 
-.list-section { padding: 39px 4px 0; }
+.list-section { padding: 4px 4px 0; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .section-heading > div { display: flex; align-items: center; gap: 13px; }
 .section-accent { width: 35px; height: 2px; background: #a78bfa; }
 .section-heading h2 { margin: 0; color: #f3f2f5; font-size: 1.18rem; letter-spacing: .02em; }
 .count { color: #9d9aa5; font-size: .76rem; }
-.empty-list {
+.flavoring-list { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.flavoring-list button {
   display: flex;
-  min-height: 112px;
+  width: 100%;
+  min-height: 82px;
   align-items: center;
-  gap: 16px;
-  margin-top: 18px;
-  padding: 20px;
-  border: 1px solid #35363d;
-  border-radius: 14px;
-  background: #232429;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid #393a42;
+  border-radius: 13px;
+  color: inherit;
+  background: #25262b;
+  text-align: left;
+  cursor: pointer;
 }
-.empty-icon {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 50%;
-  color: #baa9fb;
-  background: #302c43;
-  font-size: .85rem;
-}
-.empty-list p { margin: 0 0 6px; color: #dedce3; font-size: .86rem; line-height: 1.55; }
-.empty-list div > span { color: #94919b; font-size: .72rem; }
+.flavoring-list__content { display: grid; min-width: 0; gap: 6px; }
+.flavoring-list__name { color: #f4f4f6; font-size: 1rem; font-weight: 700; }
+.flavoring-list__seasonings { color: #aaa8b1; font-size: .78rem; line-height: 1.6; overflow-wrap: anywhere; }
+.flavoring-list__arrow { flex: 0 0 auto; color: #a78bfa; font-size: 1.55rem; line-height: 1; }
 footer { padding-top: 43px; color: #7f7c87; font-size: .72rem; text-align: center; letter-spacing: .08em; }
 
 @media (min-width: 600px) {
