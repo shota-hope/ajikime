@@ -23,7 +23,7 @@
 5. 小さなPRを作り、本文に変更点、検証結果、残る課題、`Closes #番号` を記す。
 6. 利用者のレビューを受ける。明示的な承認前にPRをマージしたり、デプロイしたりしない。
 
-テスト・ビルドの具体的なコマンドは、アプリの開発基盤を作る [Issue #2](https://github.com/shota-hope/ajikime/issues/2) で定めた。自動公開はまだ設定していない。
+テスト・ビルドの具体的なコマンドは、アプリの開発基盤を作る [Issue #2](https://github.com/shota-hope/ajikime/issues/2) で定めた。公開は Cloudflare Workers Static Assets へ手動で行い、自動公開は設定しない。手順は [README](../README.md#デプロイ) に記す。
 
 ローカルでは `npm run dev` で開発サーバーを起動し、`npm test` でテスト、`npm run build` で本番ビルドを確認する。
 

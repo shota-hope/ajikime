@@ -9,4 +9,10 @@
 - [プロダクト仕様・決定事項](docs/product.md)
 - [開発の進め方](docs/development.md)
 
-Vite + React + TypeScript の開発基盤と、スマートフォン優先のホーム／一覧画面枠を実装済みです。味付けデータと操作は後続のIssueで追加します。
+Vite + React + TypeScript で実装しています。現在、16件の味付けからランダムに1件を表示し、別の味へ引き直せます。一覧からの選択は準備中です。
+
+## デプロイ
+
+Cloudflare Workers Static Assets を使い、`workers.dev` に手動公開します。`main` の更新による自動デプロイは行いません。
+
+初回は `npx wrangler login` で公開先の Cloudflare アカウントにログインします。公開前に `npm ci --ignore-scripts`、`npm audit --audit-level=high`、`npm test`、`npm run deploy:dry-run` を実行します。確認後、`npm run deploy` で公開します。公開先の Worker 名は `ajikime` です。認証情報をリポジトリに保存しないでください。
